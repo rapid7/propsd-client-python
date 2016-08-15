@@ -13,18 +13,23 @@ Installation
 Example usage
 --------
 
+Create a client:
 ```
 import propsd
 import sys
 
-# create the propsd client
 client = propsd.Client()
+```
 
-# print a variable
+Print a property:
+```
 print(client.get(sys.argv[1]))
+```
 
-# define a property update callback and register it
+Subscribe to property changes (the search parameter is [objectpath](http://objectpath.org/reference.html) syntax):
+```
 def updated(search, properties, search_result):
   print("new value is %s" % search_result)
+
 client.subscribe("$.'%s'" % sys.argv[1], updated)
 ```
