@@ -1,0 +1,6 @@
+.eggs/
+dist/
+build/
+propsd.egg-info/
+*.pyc
+__pycache__/
