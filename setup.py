@@ -12,6 +12,7 @@ setup(
     setup_requires=['pytest-runner'],
     install_requires=[
       'APScheduler',
+      'objectpath'
     ],
     tests_require=[
         'mock',
