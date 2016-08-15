@@ -8,7 +8,7 @@ This python client allows applications to interact with the propsd service.
 Installation
 --------
 
-pip install git+https://github.com/rapid7/propsd-client-python.git@0.1.0
+`pip install git+https://github.com/rapid7/propsd-client-python.git@0.1.0`
 
 Example usage
 --------
