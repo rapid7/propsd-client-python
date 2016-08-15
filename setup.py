@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='propsd',
-    version='1.0',
+    version='0.1.0',
     description='propsd python client',
     author='Rapid7',
     author_email='R7_Labs@rapid7.com',
