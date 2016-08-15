@@ -39,58 +39,58 @@ class Client(object):
         id='update-check-job')
     self.__update_scheduler.start()
 
-  """Gets a specific property
-
-  Args:
-    key (str): The key to retrieve
-
-  Return:
-    str: The property value, or None.
-  """
   def get(self, key):
+    """Gets a specific property
+
+    Args:
+      key (str): The key to retrieve
+
+    Returns:
+      str: The property value, or None.
+    """
     try:
       response = requests.get("http://%s:%d/v1/conqueso/api/roles/default/properties/%s" % (self.propsd_server, self.propsd_port, key))
       return response.text
     except:
       log.warn("Could not retrieve property value")
 
-  """Gets all propsd properties
-
-  Return:
-    dict: The complete propsd property set
-  """
   def properties(self):
+    """Gets all propsd properties
+
+    Returns:
+      dict: The complete propsd property set
+    """
     try:
       response = requests.get("http://%s:%d/v1/properties" % (self.propsd_server, self.propsd_port))
       return json.loads(response.text)
     except:
       log.warn("Could not retrieve property value")
 
-  """Gets the status of the propsd service
-
-  Return:
-    dict: A dictionary containing the status parameters.
-  """
   def status(self):
+    """Gets the status of the propsd service
+
+    Returns:
+      dict: A dictionary containing the status parameters.
+    """
     response = requests.get("http://%s:%d/v1/status" % (self.propsd_server, self.propsd_port))
     return json.loads(response.text)
 
-  """Gets the health of the propsd service
-
-  Return:
-    dict: A dictionary containing the health parameters.
-  """
   def health(self):
+    """Gets the health of the propsd service
+
+    Returns:
+      dict: A dictionary containing the health parameters.
+    """
     response = requests.get("http://%s:%d/v1/health" % (self.propsd_server, self.propsd_port))
     return json.loads(response.text)
 
-  """Subscribe to document changes
-
-  Args:
-    search (str): The objectpatch search string
-    callback (object): The function to call
-  """
   def subscribe(self, search, callback):
+    """Subscribe to document changes
+
+    Args:
+      search (str): The objectpatch search string
+      callback (object): The function to call
+    """
     self.__update_callbacks.append({'search': search, 'callback': callback})
 
   def __update_properties(self):

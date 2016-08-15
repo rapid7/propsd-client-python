@@ -4,3 +4,4 @@ build/
 propsd.egg-info/
 *.pyc
 __pycache__/
+_build/
