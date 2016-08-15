@@ -70,4 +70,4 @@ client.subscribe("$.'%s'" % sys.argv[1], updated)
 input()
 ```
 
-`$ test.py someproperty`
+`$ python test.py someproperty`
