@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # propsd-client-python documentation build configuration file, created by
-# sphinx-quickstart on Mon Aug 15 16:45:23 2016.
+# sphinx-quickstart on Tue Aug 16 13:19:53 2016.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -17,9 +17,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
-sys.path.insert(0, os.path.abspath('../propsd'))
+# import os
+# import sys
+# sys.path.insert(0, os.path.abspath('.'))
 
 # -- General configuration ------------------------------------------------
 
@@ -32,8 +32,6 @@ sys.path.insert(0, os.path.abspath('../propsd'))
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.napoleon',
-    'sphinx.ext.todo',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -54,8 +52,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'propsd-client-python'
-copyright = '2016, Rapid7'
-author = 'Rapid7'
+copyright = '2016, Derek Abdine, Rapid7, LLC.'
+author = 'Derek Abdine, Rapid7, LLC.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -85,7 +83,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = []
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -124,7 +122,7 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-#html_theme = 'alabaster'
+html_theme = 'alabaster'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -265,7 +263,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'propsd-client-python.tex', 'propsd-client-python Documentation',
-     'Rapid7', 'manual'),
+     'Derek Abdine, Rapid7, LLC.', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -341,5 +339,3 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #
 # texinfo_no_detailmenu = False
-
-
