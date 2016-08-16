@@ -71,3 +71,7 @@ input()
 ```
 
 `$ python test.py someproperty`
+
+API documentation
+-------
+Read up on [propsd-client-python.readthedocs.io](http://propsd-client-python.readthedocs.io/en/latest/propsd.html#module-propsd).
