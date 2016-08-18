@@ -93,6 +93,11 @@ class Client(object):
     """
     self.__update_callbacks.append({'search': search, 'callback': callback})
 
+  def shutdown(self):
+    """Shuts down the propsd client
+    """
+    self.__update_scheduler.shutdown()
+
   def __update_properties(self):
     properties = self.properties()
     for item in self.__update_callbacks:

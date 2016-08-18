@@ -49,6 +49,11 @@ Dump the health of the propsd service:
 print(client.health())
 ```
 
+Shut down the client when you're done:
+```
+client.shutdown()
+```
+
 Example usage
 -------
 
@@ -68,6 +73,9 @@ def updated(search, properties, search_result):
   print("new value is %s" % search_result)
 client.subscribe("$.'%s'" % sys.argv[1], updated)
 input()
+
+# don't forget to shut down
+client.shutdown()
 ```
 
 `$ python test.py someproperty`
