@@ -30,6 +30,8 @@ And then, in setup.py, ensure that a snippet like the following exists, again su
 ...
 ```
 
+Note that you'll need to use the `--process-dependency-links` option to `pip` to install.
+
 Usage
 --------
 
