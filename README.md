@@ -8,7 +8,27 @@ This python client allows applications to interact with the propsd service.
 Installation
 --------
 
-`pip install git+https://github.com/rapid7/propsd-client-python.git@0.1.1`
+To use propsd-client-python in your local python environment, run the following, replacing `<release>` with the [release](releases) you wish to use
+
+```
+pip install git+https://github.com/rapid7/propsd-client-python.git@<release>
+```
+
+If you wish to use this inside of an existing Python project, in requirements.txt ensure that a line like the following exists, again replacing `<release>` with the [relese](releases) you wish to use:
+
+```
+propsd==<release>
+```
+
+And then, in setup.py, ensure that a snippet like the following exists, again substituting `<release>` as appropriate:
+
+```
+...
+    dependency_links=[
+        'git+https://github.com/rapid7/propsd-client-python.git@<release>#egg=propsd-<release>'
+    ]
+...
+```
 
 Usage
 --------
